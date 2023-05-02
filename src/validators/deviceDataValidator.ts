@@ -1,11 +1,11 @@
-import yup from 'yup'
+import * as yup from 'yup';
 
-const createDeviceDataSchema = yup.object({
+export const createDeviceDataSchema = yup.object({
   device_name: yup
     .string(),
   date: yup
     .string()
-    .required('Поле обязательно для заполнения'),
+    .required(),
   measure_value: yup
     .number(),
   measure_type: yup
@@ -17,5 +17,3 @@ const createDeviceDataSchema = yup.object({
   comment: yup
     .string(),
 })
-
-export default createDeviceDataSchema
